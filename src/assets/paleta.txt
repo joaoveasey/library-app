@@ -2,3 +2,6 @@ Azul Escuro / Azul Marinho: HEX: #0D2A4C
 Ciano / Azul Elétrico: HEX: #00E5FF
 Turquesa / Verde-Água: HEX: #20C2C2
 Cinza Prateado: HEX: #BFC9D2
+
+
+asdasdasd
