@@ -1,0 +1,21 @@
+.logo-externa {
+  display: block;
+  position: relative;
+  z-index: 10;
+  margin-top: -3rem;
+  margin-inline: auto;
+  width: 16rem;
+  height: 16rem;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main.content {
+  flex-grow: 1;
+}
