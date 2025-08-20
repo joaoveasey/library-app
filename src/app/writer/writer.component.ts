@@ -5,10 +5,10 @@ import { CommonModule } from '@angular/common';
   selector: 'app-writer',
   standalone: true,
   imports: [CommonModule], 
-  templateUrl: './writer.html',
-  styleUrl: './writer.css'
+  templateUrl: './writer.component.html',
+  styleUrls: ['./writer.component.css']
 })
-export class Writer {
+export class WriterComponent {
 
   @Input() author: { name: string, avatar: string } | null = null;
 
