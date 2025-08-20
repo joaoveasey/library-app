@@ -1,17 +1,29 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { Writer } from "./writer/writer";
-import { DUMMY_WRITERS } from '../dummy_writers';
+import { Books } from './books/books';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { DUMMY_WRITERS } from '../dummy_writers';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Writer, HeaderComponent, FooterComponent],
+  standalone: true,
+  imports: [CommonModule, RouterOutlet, Writer, Books, HeaderComponent, FooterComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('library-app');
-  protected readonly writers = DUMMY_WRITERS;
+  writers = DUMMY_WRITERS; 
+
+  selectedAuthorId: string | null = null;
+
+  handleAuthorSelection(authorId: string) {
+    if (this.selectedAuthorId === authorId) {
+      this.selectedAuthorId = null;
+    } else {
+      this.selectedAuthorId = authorId;
+    }
+  }
 }

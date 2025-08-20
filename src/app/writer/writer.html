@@ -1,9 +1,6 @@
-<div>
-    <button (click)="onSelectWriter()">
-        <img 
-          [src]="imagePath"
-          [alt]="name"
-        />
-        <span>{{ name }}</span>
-    </button>
-</div>
+@if (author) {
+  <div class="writer-card">
+    <img [src]="imagePath" [alt]="author.name" class="writer-avatar">
+    <span class="writer-name">{{ author.name }}</span>
+  </div>
+}

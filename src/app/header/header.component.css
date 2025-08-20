@@ -1,57 +1,7 @@
 header {
-  --header-padding: 1.5rem;
-  
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 1rem;
   gap: 1rem;
-
   width: 100%;
   margin-bottom: 2rem;
-  padding: var(--header-padding) 1rem;
-  
   background: #0D2A4C;
-  color: white;
-  text-align: center;
-  
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-}
-
-header img {
-  width: 6rem;
-  aspect-ratio: 1 / 1;
-  object-fit: contain;
-}
-
-header h1 {
-  font-size: 1.75rem;
-  font-weight: 600;
-  margin: 0;
-  letter-spacing: 0.5px;
-}
-
-header p {
-  font-size: 0.9rem;
-  margin: 0;
-  max-width: 40ch;
-  text-wrap: balance;
-}
-
-@media (min-width: 768px) {
-  header {
-    --header-padding: 2.5rem;
-  }
-
-  header img {
-    width: 7rem;
-  }
-  
-  header h1 {
-    font-size: 2.25rem;
-  }
-
-  header p {
-    font-size: 1rem;
-  }
 }

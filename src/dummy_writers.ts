@@ -23,4 +23,16 @@ export const DUMMY_WRITERS = [
         genre: 'Engenharia de Software',
         avatar: 'robert_martin.jpg'
     },
+    {
+        id: '5',
+        name: 'Isaac Asimov',
+        genre: 'Ciência Ficção',
+        avatar: 'isaac_asimov.jpg'
+    },
+    {
+        id: '6',
+        name: 'Ernest Cline',
+        genre: 'Ficção Científica',
+        avatar: 'ernest_cline.jpg'
+    }
 ];

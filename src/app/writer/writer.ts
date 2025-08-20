@@ -1,21 +1,21 @@
-import { Component, Input, input } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-writer',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule], 
   templateUrl: './writer.html',
   styleUrl: './writer.css'
 })
 export class Writer {
-  @Input() avatar!: string;
-  @Input() name!: string;
-  @Input() genre!: string;
 
-  get imagePath() {
-    return 'assets/writers/' + this.avatar;
-  }
+  @Input() author: { name: string, avatar: string } | null = null;
 
-  onSelectWriter() {
-    
+  get imagePath(): string {
+    if (!this.author || !this.author.avatar) {
+      return '';
+    }
+    return `assets/writers/${this.author.avatar}`;
   }
 }

@@ -1,25 +1,3 @@
-li {
-  list-style-type: none;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.logo-externa {
-  display: block;
-  position: relative;
-  z-index: 10;
-  margin-top: -3rem;
-  margin-inline: auto;
-  width: 16rem;
-  height: 16rem;
-  padding: 0.5rem;
-  box-sizing: border-box;
-}
-
 :host {
   display: flex;
   flex-direction: column;
@@ -28,4 +6,55 @@ ul {
 
 main.content {
   flex-grow: 1;
+  padding-block: 2rem;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.writers-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+.writers-section h2 {
+  font-size: 1.75rem;
+  color: var(--cor-texto-principal);
+  border-bottom: 2px solid var(--cor-primaria);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.writers-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.books-section {
+  flex: 1;
+  min-width: 300px;
+  background-color: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--sombra-card);
+}
+
+.placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: var(--cor-texto-secundario);
 }
