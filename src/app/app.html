@@ -1,27 +1,29 @@
 <app-header />
 <main class="content">
   <div class="container">
-
     <div class="writers-section">
       <h2>Nossos Autores</h2>
         <ul class="writers-list">
           @for (writer of writers; track writer.id) {
-            <li (click)="handleAuthorSelection(writer.id)">
+             <li (click)="handleAuthorSelection(writer.id)" 
+                 [class.selected]="selectedAuthorId === writer.id">
               <app-writer [author]="writer" />
             </li>
           }
         </ul>
     </div>
 
-    <div class="books-section">
-      @if (selectedAuthorId) {
-        <app-books />
-      } @else {
-        <div class="placeholder">
-          <h3>Selecione um autor para ver seus livros</h3>
-        </div>
-      }
-    </div>
+     <div class="books-section">
+    @if (selectedAuthorId) {
+      <app-books 
+        [books]="getSelectedAuthorBooks()" 
+        [authorName]="getSelectedAuthorName()" />
+    } @else {
+      <div class="placeholder">
+        <h3>Selecione um autor para ver seus livros</h3>
+      </div>
+    }
+  </div>
 
   </div>
 </main>
